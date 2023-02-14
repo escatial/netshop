@@ -1,0 +1,59 @@
+
+<html lang="en">
+    {% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <div class="head">
+        <div class="head-in">
+            <ul class="options">
+                <li class="sub"><a href="http://127.0.0.1:8000/?category=2#">我的订单</a></li>
+                
+                <li class="sub"><a href="/">商城首页</a></li>
+                <li class="sub"><a href="/cartapp/queryAll/">我的购物车</a></li>
+            </ul>
+    
+            {% if userInfo %}
+            <!-- 如果有用户信息 -->
+            <div class="register"><a href="/userapp/center/">欢迎，{{ userInfo.uname }}</a></div>
+            {% else %}
+            <!-- 如果没有用户信息，则进行注册 -->
+            
+            {% endif %}
+                <div class="register"><a href="/userapp/register">免费注册</a></div>
+                <div class="sign"><a href="/userapp/login">登录</a></div>
+        </div>
+    </div>
+    <div class="search">
+        <ul class="items">
+            <li class="item">
+                <a href="http://127.0.0.1:8000/?category=2#">
+                    <img src="{% static 'images/1_09.png' %}">
+                    <p>10:00开抢</p>
+                </a>
+            </li>
+            <li class="item">
+                <a href="http://127.0.0.1:8000/?category=2#">
+                    <img src="{% static 'images/1_11.png' %}">
+                    <p>买手砍价</p>
+                </a>
+            </li>
+            <li class="item">
+                <a href="http://127.0.0.1:8000/?category=2#">
+                    <img src="{% static 'images/1_13.png' %}">
+                    <p>验货质检</p>
+                </a>
+            </li>
+        </ul>
+        <div class="input">
+            <input type="" name="" value="请输入想找的宝贝">
+            <img src="{% static 'images/1_06.png' %}">
+        </div>
+    </div>
+</head>
+<body>
+    
+</body>
+</html>
